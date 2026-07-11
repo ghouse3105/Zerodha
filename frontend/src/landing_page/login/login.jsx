@@ -19,7 +19,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3002/login", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export default function Login() {
         alert("Login Successful");
 
         // Replace with your dashboard URL
-        window.location.href = "http://localhost:5173";
+       window.location.href = "https://zerodha-dashboard-l7nm.onrender.com";
       } else {
         setError(data.message);
       }

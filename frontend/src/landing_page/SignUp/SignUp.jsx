@@ -27,7 +27,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const response = await fetch("http://localhost:3002/signup", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
     })
   );
 
-  window.location.href = "http://localhost:5174/";
+ window.location.href = "https://zerodha-dashboard-l7nm.onrender.com";
 } else {
       setError(data.message);
     }
